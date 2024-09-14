@@ -1,0 +1,13 @@
+prefix=D:/All/Github Projects/RAG-Application/env/Library
+exec_prefix=D:/All/Github Projects/RAG-Application/env/Library
+libdir=D:/All/Github Projects/RAG-Application/env/Library/lib
+sharedlibdir=D:/All/Github Projects/RAG-Application/env/Library/lib
+includedir=D:/All/Github Projects/RAG-Application/env/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
