@@ -1,6 +1,4 @@
-This repository contains projects on NLP.
-
-# 1. Q&A RAG App With Gemma And Groq API.
+# Q&A RAG App With Gemma And Groq API.
 
 This project is an End-to-End Document Question Answering (Q&A) Retrieval-Augmented Generation (RAG) Application built using the Gemma Model and Groq API. It allows users to upload documents, particularly PDFs, and ask questions based on the document's content. The app returns accurate and contextually relevant answers using a combination of retrieval techniques and generative AI models.
 
@@ -22,20 +20,23 @@ This project is an End-to-End Document Question Answering (Q&A) Retrieval-Augmen
 
 - Response Time Monitoring: The app tracks and displays the time taken to process and respond to each query, allowing for performance evaluation.
 
-# 2. ChatGPT-Powered PDF Assistant with Langchain
 
-Leverage the power of Langchain and Streamlit to develop an interactive ChatGPT assistant for your PDF documents. This application allows you to upload PDFs, ask questions about their content, and get accurate, context-based responses from an LLM (Large Language Model), such as OpenAI's ChatGPT.
+## Getting Started
+To get the app running, follow these steps:
 
-## Features
-
-- Document Ingestion and Text Splitting: The app processes PDFs into manageable chunks using Langchain's `RecursiveCharacterTextSplitter` for efficient processing.
-
-- OpenAI Embeddings: Converts document chunks into vector embeddings for semantic search and retrieval.
-
-- Vector Store for Fast Retrieval: Uses `FAISS` (Facebook AI Similarity Search) to store and retrieve document chunks based on their similarity to user queries.
-
-- PDF Uploading: Easily upload PDF documents to interact with.
-
-- Query-Based Document Search: Provides highly relevant document sections based on the semantic similarity to user queries.
-
-- Question-Answering with OpenAI's LLM: Combines Langchain's `load_qa_chain` with OpenAI’s GPT model to generate human-like answers to user questions.
+1. Install the required dependencies:
+```plaintext
+    pip install -r requirements.txt
+```
+2. Set up environment variables: Ensure you have a .env file in the root directory with the following API keys:
+```plaintext
+    GROQ_API_KEY=your_groq_api_key
+    GOOGLE_API_KEY=your_google_api_key
+```
+3. Place your PDF documents inside the ./pdfs directory.
+4. Run the Streamlit app: Start the app using the following command:
+```plaintext
+    streamlit run app.py
+```
+5. Initialize the document embeddings by clicking the "Initialize Documents Embedding" button in the app.
+6. Ask a question by entering it into the input box and view the results in real time!
