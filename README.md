@@ -7,18 +7,18 @@ This project is an End-to-End Document Question Answering (Q&A) Retrieval-Augmen
 ## Features
 
 - Document Ingestion and Chunking: The application reads PDF documents from a directory, processes them into manageable text chunks, and generates embeddings for efficient retrieval.
-    - Documents are loaded from the ./pdfs directory using PyPDFDirectoryLoader.
-    - The RecursiveCharacterTextSplitter splits the documents into smaller text chunks for more effective processing and retrieval.
+    - Documents are loaded from the `./pdfs` directory using `PyPDFDirectoryLoader`.
+    - The `RecursiveCharacterTextSplitter` splits the documents into smaller text chunks for more effective processing and retrieval.
 
-- Google Generative AI Embeddings: Utilizes Google's Generative AI Embeddings to convert document chunks into vector representations for semantic understanding and retrieval.
+- Google Generative AI Embeddings: Utilizes `Google's Generative AI Embeddings` to convert document chunks into vector representations for semantic understanding and retrieval.
 
-- Vector Store for Document Search: Implements FAISS (Facebook AI Similarity Search) to create embeddings from the document chunks, enabling fast and accurate retrieval of relevant chunks based on semantic similarity.
+- Vector Store for Document Search: Implements `FAISS` (Facebook AI Similarity Search) to create embeddings from the document chunks, enabling fast and accurate retrieval of relevant chunks based on semantic similarity.
 
 - Retrieval-Augmented Generation (RAG): The app combines document retrieval with generative AI to answer user questions based on the content of the uploaded documents. The relevant document chunks are retrieved and passed to the language model for answer generation.
 
-- Language Model Integration: Uses ChatGroq, powered by the Llama3-8b-8192 model, to generate human-like responses to user queries.
-    - The Groq API, powered by Llama3-8b-8192, produces precise answers based on the context of the retrieved document chunks.
-    - The language model is guided by a custom prompt template (ChatPromptTemplate) designed to provide contextually accurate answers.
+- Language Model Integration: Uses `ChatGroq`, powered by the Llama3-8b-8192 model, to generate human-like responses to user queries.
+    - The `Groq` API, powered by `Llama3-8b-8192`, produces precise answers based on the context of the retrieved document chunks.
+    - The language model is guided by a custom prompt template (`ChatPromptTemplate`) designed to provide contextually accurate answers.
 
 - Response Time Monitoring: The app tracks and displays the time taken to process and respond to each query, allowing for performance evaluation.
 
