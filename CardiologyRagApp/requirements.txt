@@ -1,0 +1,10 @@
+chromadb
+transformers
+torch
+huggingface_hub
+sentence-transformers
+pypdf
+PyPDF2
+langchain
+langchain-community
+python-dotenv
